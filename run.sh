@@ -1,0 +1,1 @@
+/opt/homebrew/lib/ruby/gems/3.3.0/gems/jekyll-3.9.5/exe/jekyll  serve -l -H localhost
