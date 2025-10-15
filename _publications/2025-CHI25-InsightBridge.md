@@ -12,4 +12,4 @@ This project introduces InsightBridge, an AI-assisted tool that supports researc
 
 [Download paper here](https://dl.acm.org/doi/10.1145/3706598.3713640)
 
-Recommended citation: Junze Li, Yue Zhang, Chengbo Zheng, Dingdong Liu, Zeyu Huang, Xiaojuan Ma
+Recommended citation: Junze Li, Yue Zhang, Chengbo Zheng, Dingdong Liu, Zeyu Huang, and Xiaojuan Ma. 2025. InsightBridge: Enhancing Empathizing with Users through Real-Time Information Synthesis and Visual Communication. In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI '25). Association for Computing Machinery, New York, NY, USA, Article 167, 1–15. https://doi.org/10.1145/3706598.3713640
