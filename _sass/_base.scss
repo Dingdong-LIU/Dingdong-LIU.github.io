@@ -199,9 +199,15 @@ ul.task-list input[type="checkbox"] {
     margin-bottom: 5px;
     margin-top: 5px;
     font-family: monospace;
+    // Upstream leaves this at body size, which makes a multi-line address
+    // overflow its column. Tune this value to resize the address block.
+    font-size: 0.75rem;
+    line-height: 1.6;
 
     p {
-      display: inline-block;
+      // Upstream uses inline-block, so consecutive address lines run together
+      // and wrap mid-phrase. Block keeps one line per <p>.
+      display: block;
       margin: 0;
     }
   }

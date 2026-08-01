@@ -11,5 +11,8 @@ assets/libs/
 node_modules/
 vendor
 .idea
-# Personal working notes, not part of the site
-TODO.md
+
+# Patent paperwork: internal legal/IP documents. This repo is public, so these
+# stay on disk only. Delete these lines if you decide they should be published.
+P3683US00*.pdf
+Patent_*.pdf

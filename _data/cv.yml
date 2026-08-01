@@ -35,7 +35,7 @@
 - title: Research Experience
   type: time_table
   contents:
-    - title: Research Intern
+    - title: Visiting Student Researcher
       institution: Pervasive HCI Group, Tsinghua University
       year: Jan 2026 - Apr 2026
       description:
@@ -43,7 +43,7 @@
         - Analyzed user patterns and designed working strategies for clinician-patient-agent collaboration.
         - Supervised by Prof. Yuntao Wang.
     - title: Research Intern
-      institution: Microsoft Research
+      institution: Microsoft Research Asia
       year: May 2025 - Sep 2025
       description:
         - Led an independent project to improve telehealth communication; analyzed 5,000+ encounters.
@@ -72,15 +72,16 @@
         - Participated in the design and framework development of human-robot conversational systems for elderly care applications.
         - Produced two co-first-author papers at IEEE RO-MAN (2024, 2025) and one first-author paper at ACM CHI 2025.
 
-- title: Patents
+- title: Patent Applications
   type: time_table
   contents:
     - title: An Automated Scaffolding System for Neurocognitive Disorder Screening Dialog Tasks
-      institution: United States Patent and Trademark Office (USPTO)
+      institution: US Provisional Patent Application, filed with the USPTO
       year: 2025
       description:
         - A scaffolding conversational agent system for automated neurocognitive disorder screening, designed for better usability and user engagement.
-        - Provisional Application No. 63/854,195, filed 30 July 2025 (Patent Center #71603362).
+        - Application No. 63/854,195, filed 30 July 2025. Co-assigned to HKUST and CUHK.
+        - Inventors: Helen Mei Ling Meng, Xiaojuan Ma, Jiaxiong Hu, Dingdong Liu, Ka Ho Wong.
 
 - title: Teaching Experience
   type: time_table

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started a research internship with the **Pervasive HCI Group at Tsinghua University**, working with Prof. Yuntao Wang on clinician-patient-agent collaboration in post-dentist care.
+Visiting the **Pervasive HCI Group at Tsinghua University**, hosted by Prof. Yuntao Wang, to work on clinician-patient-agent collaboration in post-dentist care.

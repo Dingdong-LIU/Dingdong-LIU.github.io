@@ -16,7 +16,13 @@
     {% if site.imagemagick.enabled %}
       <source
         class="responsive-img-srcset"
-        {% if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.tiff' or ext == '.gif' %}
+        {% comment %}
+          `split: '.'` yields the extension without a leading dot ("jpg", not ".jpg"),
+          so upstream's '.jpg'-style comparisons never matched and every image fell
+          through to the non-responsive branch — the generated webp variants were
+          built but never referenced. Compare without the dot.
+        {% endcomment %}
+        {% if ext == 'jpg' or ext == 'jpeg' or ext == 'png' or ext == 'tiff' or ext == 'gif' %}
           srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
           type="image/webp"
         {% else %}
