@@ -74,6 +74,15 @@
       {% endif %}
       {% if include.zoomable %}
         data-zoomable
+        {% comment %}
+          The <picture> above resolves to a small webp (thumbnails pass
+          sizes="200px", so the browser picks the 480w variant). medium-zoom
+          scales up whatever the browser already loaded and never re-fetches,
+          because `sizes` still reports 200px — so the zoomed view would be a
+          480px image blown up. data-zoom-src points the zoom at the original
+          full-resolution file, loaded only on click.
+        {% endcomment %}
+        data-zoom-src="{{ include.path | relative_url }}"
       {% endif %}
       {% if include.loading %}
         loading="{{ include.loading }}"
