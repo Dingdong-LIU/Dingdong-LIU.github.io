@@ -69,21 +69,16 @@ scale them. Any aspect ratio works — wide teaser figures look best.
 
 Entries without `preview` render fine without a thumbnail, so add them incrementally.
 
-All six first/co-first-author papers now have thumbnails:
+**Done — all 12 papers have thumbnails.** Nothing outstanding here.
 
-- [x] `liuCoNarrate2026` — UIST 2026 (`uist-2026-conarrate.jpg`)
-- [x] `liuDissectingInteractionGulfs` — TOCHI (`tochi-2026-ncd.jpg`)
-- [x] `liuScaffoldedTurnsAndLogicalConversationsDesigning2025` — CHI '25 (`chi-2025-paf.jpg`)
-- [x] `shenDynamicPromptingImproves2025` — RO-MAN '25 (`roman-2025-turntaking.jpg`)
-- [x] `shenHumanoidRobotDialogueSystemArchitecture2024` — RO-MAN '24 (`roman-2024-patientinterview.png`)
-- [x] `liuExploringScaffoldingTechniques2024` — DIS '24 (`dis-2024-scaffolding.png`)
-- [ ] remaining co-authored papers (CHI '26, CHI '25 InsightBridge, TVCG, CHI '23,
-      DIS '22, CSCW '22) — optional, they render fine without
+Two notes for when you add more:
 
-Note: `chi-2025-paf.jpg` is 2.4 MB as a source file. The site only ever serves the
-27 KB webp, so there's no visitor-facing cost, but git keeps that 2.4 MB forever.
-Worth downscaling the source to ~1400px before it's pushed if you care about repo
-size — say the word and I'll do it.
+- Use `.jpg` or `.png`. PDFs cannot be `<img>` sources and are not in
+  `imagemagick.input_formats`, so they silently render as a broken image.
+  `sips -s format png in.pdf --out out.png` converts them (ImageMagick in the
+  container can't — it has no Ghostscript).
+- Don't hand-resize. Sources are downscaled to 1600px and PNGs quantized to 256
+  colors on commit; the site serves 480/800/1400px webp regardless.
 
 ### PDFs
 

@@ -389,9 +389,15 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    // Upstream uses 4rem, which makes the icon row the largest element on the
+    // page and pulls attention away from the content above it.
+    font-size: 1.6rem;
+    line-height: 2;
 
     a {
+      // Space the icons out now that they are smaller.
+      margin: 0 0.35rem;
+
       i::before {
         color: var(--global-text-color);
         transition-property: all 0.2s ease-in-out;

@@ -17,3 +17,8 @@
 "TVCG":
   url: https://www.computer.org/csdl/journal/tg
   color: "#00629b"
+
+# Placeholder badge for manuscripts still under anonymous review. Neutral grey so
+# it reads as a status rather than a venue.
+"Under Review":
+  color: "#6c757d"
