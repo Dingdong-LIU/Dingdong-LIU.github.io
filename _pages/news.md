@@ -1,6 +1,6 @@
 ---
 layout: page
-title: news
+title: News
 permalink: /news/
 description: Talks, service, awards, and other activities.
 nav: true

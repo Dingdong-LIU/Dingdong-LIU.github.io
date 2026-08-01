@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Ph.D. Candidate, <a href='https://hci.cse.ust.hk/'>HCI Initiative</a>, <a href='https://hkust.edu.hk/'>HKUST</a>
 
