@@ -395,6 +395,32 @@ ul.task-list input[type="checkbox"] {
   background-color: transparent !important;
 }
 
+// Close button injected by assets/js/zoom.js while an image is zoomed.
+// medium-zoom uses z-index 998 for the overlay and 999 for the image.
+.medium-zoom-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 1000;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--global-theme-color);
+    transform: scale(1.08);
+  }
+}
+
 .social {
   text-align: center;
 
