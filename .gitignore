@@ -11,3 +11,5 @@ assets/libs/
 node_modules/
 vendor
 .idea
+# Personal working notes, not part of the site
+TODO.md

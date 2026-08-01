@@ -6,7 +6,7 @@ subtitle: Ph.D. Candidate, <a href='https://hci.cse.ust.hk/'>HCI Initiative</a>,
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: photo_live_l.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Dept. of Computer Science and Engineering</p>
