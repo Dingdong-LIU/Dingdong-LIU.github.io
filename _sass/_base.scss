@@ -703,7 +703,16 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
+      // Teaser figures arrive at wildly different aspect ratios (roughly 1.1:1
+      // to 2.7:1), which left the thumbnail column ragged. Pin every thumbnail
+      // to one box and letterbox the contents rather than cropping — these are
+      // system diagrams, so trimming edges would cut away actual content.
+      // Clicking still opens the full image via medium-zoom (data-zoomable).
       .preview {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: contain;
+        background-color: var(--global-card-bg-color);
       }
 
       .abbr {
