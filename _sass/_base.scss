@@ -385,6 +385,16 @@ ul.task-list input[type="checkbox"] {
 
 // Social (bottom)
 
+// medium-zoom reuses the same <img> element when it opens, so the fixed 3:2
+// thumbnail box above would follow the image into the overlay and squash the
+// full-size view. Release the constraints once zoomed so it shows at its true
+// aspect ratio. !important because the thumbnail rule is more specific.
+.medium-zoom-image--opened {
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  background-color: transparent !important;
+}
+
 .social {
   text-align: center;
 
