@@ -1,18 +1,25 @@
 ---
+layout: about
+title: about
 permalink: /
-title: "About Me" # "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
-excerpt: "" #"About me"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: false # crops the image to make it circular
+  more_info: >
+    <p>555 your office number</p>
+    <p>123 your address street</p>
+    <p>Your City, State 12345</p>
+
+news: true # includes a list of news items
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: true # includes social icons at the bottom of the page
 ---
 
-My name is Dingdong LIU. I'm currently a PhD candidate in department of Computer Science and Engineering (CSE) at the [HCI Initiative](https://hci.cse.ust.hk/) of [HKUST](https://hkust.edu.hk/), supervised by Prof. [Xiaojuan, MA](https://seng.hkust.edu.hk/about/people/faculty/xiaojuan-ma) and Prof. [Fugee, TSUNG](https://seng.hkust.edu.hk/about/people/faculty/fugee-tsung) since 2022. I also do research on humanoid robot with Prof. [Bertram Emil SHI](https://seng.hkust.edu.hk/about/people/faculty/bertram-emil-shi) in [Center for Aging Science](https://aging.hkust.edu.hk/). Prior to that, I earned my Bachelor’s Degree in Computer Science and Data Science at HKUST.
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-My research interest lies in robotics and Human-Computer Interaction (HCI), with a focus on exploring interaction mode between human and AI agents (chatbots, physical robots, etc.). I aim to gain insights into the capabilities that an agent should have to better support human in various tasks, including daily task planning and decision making, medical services, etc.
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-## Publications
-<ul>{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
