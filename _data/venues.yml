@@ -1,9 +1,19 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"CHI":
+  url: https://chi.acm.org/
+  color: "#0071bc"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"DIS":
+  url: https://dis.acm.org/
+  color: "#00a0a0"
 
-"Vision":
-  color: "#009f36"
+"CSCW":
+  url: https://cscw.acm.org/
+  color: "#7a3e9d"
+
+"RO-MAN":
+  url: https://www.ieee-ras.org/conferences-workshops/technically-co-sponsored/ro-man
+  color: "#c0392b"
+
+"TVCG":
+  url: https://www.computer.org/csdl/journal/tg
+  color: "#00629b"

@@ -2,24 +2,22 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Ph.D. Candidate, <a href='https://hci.cse.ust.hk/'>HCI Initiative</a>, <a href='https://hkust.edu.hk/'>HKUST</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Dept. of Computer Science and Engineering</p>
+    <p>The Hong Kong University of Science and Technology</p>
+    <p>Clear Water Bay, Hong Kong</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+My name is Dingdong LIU. I'm currently a Ph.D. candidate in the Department of Computer Science and Engineering (CSE) at the [HCI Initiative](https://hci.cse.ust.hk/) of [HKUST](https://hkust.edu.hk/), supervised by Prof. [Xiaojuan MA](https://seng.hkust.edu.hk/about/people/faculty/xiaojuan-ma) and Prof. [Fugee TSUNG](https://seng.hkust.edu.hk/about/people/faculty/fugee-tsung) since 2022. I also do research on humanoid robots with Prof. [Bertram Emil SHI](https://seng.hkust.edu.hk/about/people/faculty/bertram-emil-shi) at the [Center for Aging Science](https://aging.hkust.edu.hk/). Prior to that, I earned my Bachelor's degree in Computer Science and Data Science at HKUST.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My research interest lies in robotics and Human-Computer Interaction (HCI), with a focus on exploring interaction modes between humans and AI agents (chatbots, physical robots, etc.). I aim to gain insights into the capabilities an agent should have to better support humans in various tasks, including daily task planning and decision making, medical services, and more.

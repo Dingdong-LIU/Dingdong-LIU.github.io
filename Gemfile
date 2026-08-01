@@ -1,4 +1,16 @@
 source 'https://rubygems.org'
+
+# Stdlib libraries that became bundled gems in Ruby 3.4+ and so must now be
+# declared explicitly. citeproc-ruby (via jekyll-scholar) requires 'observer';
+# the rest are pulled in transitively by the same dependency tree. Needed
+# because the al-folio Docker image builds FROM ruby:latest, which is now 4.x.
+gem 'base64'
+gem 'bigdecimal'
+gem 'csv'
+gem 'logger'
+gem 'observer'
+gem 'ostruct'
+
 group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll'
