@@ -213,6 +213,80 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Contact block inside the profile card. Scoped separately from the old
+// full-width `.social` footer so it reads as part of the card, not a banner.
+.profile .profile-social {
+  margin-top: 0.75rem;
+
+  .contact-icons {
+    font-size: 1.35rem;
+    line-height: 1.9;
+
+    a {
+      margin-right: 0.5rem;
+
+      i::before {
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+
+  .contact-note {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// Sections after the bio and News must clear the floated profile card.
+.clear-profile {
+  clear: both;
+}
+
+// Short highlighted line near the top of the about page, for a status that
+// should be visible without reading the bio (e.g. job-market availability).
+.status-banner {
+  margin-bottom: 1.25rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 0 4px 4px 0;
+  background-color: var(--global-code-bg-color);
+  font-size: 0.9rem;
+
+  // kramdown wraps the banner text in a <p>; drop its default margins so the
+  // padding above controls the box.
+  p {
+    margin: 0;
+  }
+}
+
+// Scannable research keywords under the bio.
+.research-tags {
+  margin: 0.5rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin: 0 0.35rem 0.4rem 0;
+    padding: 0.2rem 0.65rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 1rem;
+    background-color: var(--global-card-bg-color);
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+    white-space: nowrap;
+  }
+}
+
 .profile.float-right {
   margin-left: 1rem;
 }

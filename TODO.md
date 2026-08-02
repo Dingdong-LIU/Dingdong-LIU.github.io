@@ -32,11 +32,25 @@ follow-on filing needs chasing **now**.
 
 ## Needs your input
 
-### Talks, interns, thesis status
+### ⚠️ Confirm the job-market banner
+
+The front page now opens with:
+
+> 🎓 **On the job market.** I expect to complete my Ph.D. in 2026 and am looking
+> for research positions in HCI and human–agent interaction.
+
+**I wrote this from your CV's "2026 (expected)" — you have not confirmed it.**
+It is the first thing a visitor reads, so check the wording. Edit it in
+`_pages/about.md`, or tell me to change or remove it. Things to decide:
+
+- Is "2026" still right, or do you have a defense date?
+- Industry as well as academic positions, or academic only?
+- Do you want this visible at all right now?
+
+### Talks and interns
 
 - [ ] **Talks** — title, venue, date, invited vs. conference
 - [ ] **Past interns** — names, dates, what they worked on, where they went
-- [ ] **Thesis / job market** — defense date, and whether to say you're on the market
 
 ### Small decisions still open
 
