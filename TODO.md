@@ -218,6 +218,17 @@ Venue badges (`abbr`) could drive a second filter row the same way.
 
 ## Done
 
+- **Production-only CSS bug caught before launch.** The deploy workflow runs
+  `purgecss`, which deletes any class it can't find in the built HTML/JS.
+  medium-zoom is loaded from a CDN and adds `medium-zoom-image--opened` at
+  runtime, so our override was stripped in production only — zoomed images would
+  have gone back to being squashed into the thumbnail's 3:2 box on the live site
+  while still looking correct locally. Added `safelist: [/^medium-zoom/]` to
+  `purgecss.config.js` and verified against a real production build + purge.
+- **Removed `assets/jupyter/blog.ipynb`**, a leftover al-folio demo notebook.
+  `_posts/` is empty and nothing referenced it.
+- **Verified the GitHub Actions build locally** on Ruby 3.2.2 (what CI uses,
+  versus Ruby 4.0 in the dev container) — clean build, exit 0.
 - **CV date badges collided with entry titles.** Upstream pinned the date column
   to an inline `width: 75px` while the badge is `white-space: nowrap`, so any
   value longer than a bare year ("Jan 2026 - Apr 2026") overflowed into the title.
