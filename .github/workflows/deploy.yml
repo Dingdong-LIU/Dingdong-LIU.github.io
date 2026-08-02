@@ -79,6 +79,17 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      # ubuntu-latest now resolves to ubuntu-24.04, which dropped ImageMagick from
+      # the runner image. jekyll-imagemagick fails quietly without it: the build
+      # still succeeds, but no -480/-800/-1400 .webp variants are produced, so every
+      # <picture> falls back to the full-size original via its onerror handler.
+      # Install it explicitly rather than relying on what the runner happens to ship.
+      - name: Install ImageMagick 🖼️
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends imagemagick
+          convert -version | head -1
+          convert -list format | grep -i webp || (echo "::error::ImageMagick has no WEBP delegate"; exit 1)
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
