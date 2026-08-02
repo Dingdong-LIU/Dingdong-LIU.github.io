@@ -195,6 +195,7 @@ Venue badges (`abbr`) could drive a second filter row the same way.
 | Contact icon size | `_sass/_base.scss`, marked `ICON SIZE` (max ~1.6rem before wrapping) |
 | Address block size | `_sass/_base.scss`, `.profile .more-info` `font-size` |
 | Thumbnail box ratio | `_sass/_base.scss`, `ol.bibliography li .preview` `aspect-ratio` |
+| CV date column width | `_sass/_cv.scss`, marked `DATE COLUMN WIDTH` (9rem; shrink it and long dates wrap to two lines) |
 | Zoom inset | `margin` in `assets/js/zoom.js` |
 | News items on homepage | `announcements.limit` in `_config.yml` |
 
@@ -220,9 +221,12 @@ Venue badges (`abbr`) could drive a second filter row the same way.
 - **CV date badges collided with entry titles.** Upstream pinned the date column
   to an inline `width: 75px` while the badge is `white-space: nowrap`, so any
   value longer than a bare year ("Jan 2026 - Apr 2026") overflowed into the title.
-  Gave the column a real grid share (`col-12 col-md-3`) in
-  `_includes/cv/time_table.liquid` and added `.cv-date` to `_sass/_cv.scss` so
-  long values wrap instead. Also fixed upstream's `cl-sm-2` / `cl-sm-10` typos.
+  The column is now `col-md-auto` with a fixed 9rem width set in `.cv-date`
+  (`_sass/_cv.scss`) — fixed rather than auto so the date rail stays aligned down
+  the page, and 9rem rather than a grid fraction because `col-md-3` reserved 237px
+  for a badge that needs ~140px. Badges are also allowed to wrap, so nothing can
+  overflow even if a future date string is longer. Also fixed upstream's
+  `cl-sm-2` / `cl-sm-10` typos.
 - **Undergraduate-era material folded down.** Dean's List, Google Hash Code, the
   Kerry Holdings scholarship, and the Algo Trading placing are now one
   "2018 - 2022 — *Undergraduate:* …" row under Honors and Awards instead of four

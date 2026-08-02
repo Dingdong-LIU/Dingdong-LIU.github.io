@@ -8,10 +8,11 @@
             `col-sm-2` as `cl-sm-2`). The date badge is `white-space: nowrap`, so
             anything longer than a bare year — "Jan 2026 - Apr 2026",
             "2024, 2025, 2026" — rendered at its natural width and overflowed the
-            75px box, colliding with the entry title. Give the column a real share
-            of the grid instead; `.cv-date` in _cv.scss lets long values wrap.
+            75px box, colliding with the entry title. `col-md-auto` here plus a
+            fixed width in `.cv-date` (_sass/_cv.scss) keeps every date rail
+            aligned without eating a quarter of the row.
           {%- endcomment -%}
-          <div class="col-12 col-md-3 text-center cv-date">
+          <div class="col-12 col-md-auto text-center cv-date">
             <table class="table-cv">
               <tbody>
                 <tr>
@@ -35,7 +36,7 @@
             </table>
           </div>
         {% endif %}
-        <div class="col-12 col-md-9 mt-2 mt-md-0">
+        <div class="col-12 col-md mt-2 mt-md-0">
           {% if content.title %}
             <h6 class="title font-weight-bold ml-1 ml-md-4">{{ content.title }}</h6>
           {% endif %}
