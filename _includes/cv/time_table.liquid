@@ -17,7 +17,14 @@
               <tbody>
                 <tr>
                   <td>
-                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+                    {%- comment -%}
+                      Upstream sets an inline `min-width: 75px` here. Inline styles
+                      beat the stylesheet, so that floor would survive any attempt
+                      to narrow the column and push the badge back over the title.
+                      The min-width now lives in `.cv-date .badge` (_sass/_cv.scss),
+                      clamped to the column width.
+                    {%- endcomment -%}
+                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle">
                       {{- content.year -}}
                     </span>
                   </td>

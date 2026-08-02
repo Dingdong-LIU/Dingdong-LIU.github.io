@@ -45,18 +45,29 @@ a.btncv:hover {
 // width rather than a grid fraction.
 //
 // The width has to be fixed, not `auto`, or each row would size to its own date
-// and the titles would no longer line up. >>> DATE COLUMN WIDTH <<< 9rem fits the
-// longest value we use (19 characters) on one line; shrink it and long dates wrap
-// to two lines, which is fine — nothing overflows either way.
+// and the titles would no longer line up.
+//
+// >>> DATE COLUMN WIDTH <<< — change this one value, nothing else. It is a custom
+// property because a flex item takes its main-axis size from `flex-basis`, not
+// `width`; editing `width` alone would do nothing. 9rem fits the longest value we
+// use (19 characters) on one line. Shrink it and long dates wrap to two lines,
+// which is fine — the badge is capped at the column width, so nothing overflows.
 .cv-date {
+  --cv-date-width: 9rem;
+
   .badge {
     white-space: normal;
     line-height: 1.3;
+    // Keeps bare years like "2026" from looking cramped, but never wider than the
+    // column itself, so shrinking --cv-date-width can't push the badge back into
+    // the title.
+    min-width: min(4.5rem, 100%);
+    max-width: 100%;
   }
 
   @media (min-width: 768px) {
-    flex: 0 0 9rem;
-    width: 9rem;
+    flex: 0 0 var(--cv-date-width);
+    width: var(--cv-date-width);
     padding-right: 0;
   }
 }
