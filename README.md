@@ -1,3 +1,9 @@
+> [!WARNING]
+> **Deprecated on 3 August 2026.** This branch is the frozen final state of the
+> academicpages version of my site, kept for reference and rollback. The live site
+> is now built from `master` with [al-folio](https://github.com/alshedivat/al-folio).
+> See [DEPRECATED.md](DEPRECATED.md) for how to roll back.
+
 # Academic Pages
 
 ![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
