@@ -169,20 +169,31 @@ Missing PDFs for the CHI and CSCW papers — add them and I'll wire up `pdf = {.
 
 ---
 
-## Deployment (not started — nothing pushed yet)
+## Deployment — done, live since 3 August 2026
 
-All work is on the local `al-folio` branch. `master` and the live site are
-untouched. `academicpages-final` tags the old site.
+<https://Dingdong-LIU.github.io> serves al-folio. Verified end to end: all four
+pages 200, 12 publications, 11 news items, 24 internal links all resolving, CV
+rendering from `_data/cv.yml`.
 
-When ready:
+**How it works now.** Push to `master` → the "Deploy site" workflow builds and
+writes to `gh-pages` → GitHub Pages serves `gh-pages`. You never touch the
+Actions tab again, and never edit `gh-pages` by hand.
 
-1. Push the `al-folio` branch
-2. GitHub → Settings → Actions → General → Workflow permissions → **Read and write**
-3. GitHub → Actions → "Deploy site" → Run workflow on `al-folio` → creates `gh-pages`
-4. GitHub → Settings → Pages → Deploy from branch → **`gh-pages`**
-5. Merge `al-folio` → `master`
+| Branch | Role |
+| --- | --- |
+| `master` | source of truth — push here and it auto-deploys |
+| `gh-pages` | build output, written by Actions |
+| `al-folio` | now identical to `master`; safe to delete |
+| `academicpages-deprecated` | frozen old site, rollback target |
 
-Steps 2-4 are browser-only.
+**Rolling back** needs no git at all: Settings → Pages → Source → branch
+`academicpages-deprecated`. That tree builds with GitHub's built-in Jekyll, which
+is how it was always published. Repoint at `gh-pages` to come back. Details are
+in `DEPRECATED.md` on that branch.
+
+Note that the built-in builder **cannot** build `master` — al-folio uses plugins
+outside GitHub's allowlist, so pointing Pages at `master` fails with
+`Unknown tag 'toc'`. That failure is expected and harmless if you ever see it.
 
 ---
 
@@ -238,6 +249,19 @@ Venue badges (`abbr`) could drive a second filter row the same way.
 
 ## Done
 
+- **Responsive images were never being generated in CI.** `ubuntu-latest` now
+  resolves to `ubuntu-24.04`, which dropped ImageMagick from the runner image.
+  `jekyll-imagemagick` skips generation without erroring, so the build exited 0
+  while producing zero `.webp` files — every `<picture>` fell back to the
+  full-size original through its `onerror` handler. The site looked completely
+  normal, but the front page pulled **2.0 MB** of images where webp needs
+  **154 KB**, to fill thumbnail slots ~200px wide.
+  Local testing had missed it because the `ruby:3.2.2` image happens to ship
+  ImageMagick. `deploy.yml` now installs it explicitly and *asserts* the WEBP
+  delegate exists, so a future runner change fails loudly instead of silently.
+- **Award marking.** 🏆 in front of the title of any paper with an `award` field,
+  and a new `award_photo` field showing the award photo when the award button is
+  clicked. See "Awards on a publication" above.
 - **Production-only CSS bug caught before launch.** The deploy workflow runs
   `purgecss`, which deletes any class it can't find in the built HTML/JS.
   medium-zoom is loaded from a CDN and adds `medium-zoom-image--opened` at
