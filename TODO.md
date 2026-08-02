@@ -49,6 +49,23 @@ Deliberately written in months, not exact dates, so it stays true either side of
       Right now it reads as open to both.
 - [ ] Consider a News item for the defense once it's done.
 
+**To remove the banner entirely** (once you've accepted an offer): open
+`_pages/about.md` and delete everything between
+
+```
+<!-- ===== JOB-MARKET BANNER — delete this whole block ... ===== -->
+```
+
+and
+
+```
+<!-- ===== END JOB-MARKET BANNER ===== -->
+```
+
+inclusive — 6 lines, right under the front matter. Nothing else depends on it;
+the `.status-banner` styling stays in `_sass/_base.scss` if you ever want it back
+for another announcement.
+
 ### Talks and interns
 
 - [ ] **Talks** — title, venue, date, invited vs. conference
@@ -117,6 +134,40 @@ When ready:
 5. Merge `al-folio` → `master`
 
 Steps 2-4 are browser-only.
+
+---
+
+## Ideas
+
+### Publication filter tags
+
+Filter the publications page by topic or venue using pill buttons. The styling
+already exists as `.tag-pills` in `_sass/_base.scss` (originally written for the
+about page, kept for this). Sketch:
+
+- Add a `tags` field to entries in `_bibliography/papers.bib`, e.g.
+  `tags = {conversational-agents, health}`.
+- Render a `<ul class="tag-pills">` of the distinct tags above the list in
+  `_pages/publications.md`.
+- Filter client-side by toggling a class on each `<li class="row">`. The page
+  already loads jQuery, and `_includes/bib_search.liquid` does something similar
+  for the search box — worth reading first.
+
+Venue badges (`abbr`) could drive a second filter row the same way.
+
+---
+
+## Quick reference — where to tune things
+
+| What | Where |
+| --- | --- |
+| Page width | `max_width` in `_config.yml` (marked `PAGE WIDTH`) |
+| Browser tab icon | `icon` in `_config.yml` (marked `BROWSER TAB ICON`) |
+| Contact icon size | `_sass/_base.scss`, marked `ICON SIZE` (max ~1.6rem before wrapping) |
+| Address block size | `_sass/_base.scss`, `.profile .more-info` `font-size` |
+| Thumbnail box ratio | `_sass/_base.scss`, `ol.bibliography li .preview` `aspect-ratio` |
+| Zoom inset | `margin` in `assets/js/zoom.js` |
+| News items on homepage | `announcements.limit` in `_config.yml` |
 
 ---
 

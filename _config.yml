@@ -14,7 +14,10 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: Dingdong Liu, HKUST, HCI, human-computer interaction, human-agent interaction, human-robot interaction, conversational agents # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🤖 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+# >>> BROWSER TAB ICON: any single emoji works, or drop an image in
+# /assets/img/ and put its filename here instead (e.g. favicon.png).
+# Fitting alternatives: 🗣 💭 🧠 🫂 🤝 🩺 🎓 💬
+icon: 🎓 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://Dingdong-LIU.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -53,7 +56,11 @@ socials_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 930px
+# >>> PAGE WIDTH: this single value drives `.container { max-width }` for the
+# whole site, via $max-content-width in assets/css/main.scss. Upstream ships
+# 930px, which leaves wide margins on a large display. Raise or lower freely --
+# much past ~1300px and body text lines get long enough to hurt readability.
+max_width: 950px
 
 # TODO: add layout settings (single page vs. multi-page)
 

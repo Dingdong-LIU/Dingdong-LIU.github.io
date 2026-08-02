@@ -257,6 +257,10 @@ ul.task-list input[type="checkbox"] {
 // Short highlighted line near the top of the about page, for a status that
 // should be visible without reading the bio (e.g. job-market availability).
 .status-banner {
+  // Floats push inline content aside but not block boxes, so by default this
+  // banner's background slid underneath the profile photo. Establishing a block
+  // formatting context makes the box shrink to sit beside the float instead.
+  display: flow-root;
   margin-bottom: 1.25rem;
   padding: 0.6rem 0.9rem;
   border-left: 3px solid var(--global-theme-color);
