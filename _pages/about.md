@@ -23,7 +23,7 @@ social: true # includes social icons, rendered inside the profile card
 <!-- ===== JOB-MARKET BANNER — delete this whole block once you've accepted an
      offer. Nothing else depends on it; the page reads fine without it. ===== -->
 <div class="status-banner" markdown="1">
-🎓 &nbsp;**On the job market.** Defending my Ph.D. thesis in August 2026 and graduating in November 2026. I'm looking for research positions in HCI and human–agent interaction.
+🎓 &nbsp;**On the job market.** Defending my Ph.D. thesis in August 2026 and graduating in November 2026. I'm looking for research positions in HCI and human–agent interaction, in academia and industry labs alike.
 </div>
 <!-- ===== END JOB-MARKET BANNER ===== -->
 
@@ -34,7 +34,7 @@ My work asks how conversational agents can acquire **communicative competence** 
 - **Coordination** — reading conversational dynamics: when to speak, how to signal and yield the floor, and how to handle interruptions. I study this in embodied spoken dialogue systems and humanoid robots.
 - **Content** — deciding what the conversation should be *about*. I approach this two ways: **empirically**, by learning from and co-designing with domain experts, and by **inference**, using human modeling and graph algorithms to derive the next move.
 
-I then bring both levels together in a single deployed agent for neurocognitive disorder screening, and use the *gulfs of execution and evaluation* to analyze its interactions with 38 older adults — asking where this competence holds up when the person on the other side is making sense of an unfamiliar and complex system.
+<!-- I then bring both levels together in a single deployed agent for neurocognitive disorder screening, and use the *gulfs of execution and evaluation* to analyze its interactions with 38 older adults — asking where this competence holds up when the person on the other side is making sense of an unfamiliar and complex system. -->
 
 Together these ask what an agent must be able to do to genuinely support people — in clinical interviews, cognitive screening, and everyday decision making.
 

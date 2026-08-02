@@ -638,9 +638,16 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
+# DISABLED ON PURPOSE. al-folio can build the CV page from either
+# `_data/cv.yml` (YAML) or a JSON Resume file loaded here into `site.data.resume`.
+# `_layouts/cv.liquid` checks `{% unless site.data.resume %}` first, so as long as
+# this block is active the JSON wins and `_data/cv.yml` is ignored entirely.
+# We use `_data/cv.yml`, so this stays commented out and the demo
+# `assets/json/resume.json` has been deleted. Re-enable only if you migrate the
+# whole CV to JSON Resume format.
+# jekyll_get_json:
+#   - data: resume
+#     json: assets/json/resume.json # it can also be an url
 jsonresume:
   - basics
   - work

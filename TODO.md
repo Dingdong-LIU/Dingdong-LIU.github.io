@@ -4,29 +4,56 @@ Tracked in git so I keep my progress. Excluded from the built site via `_config.
 
 ---
 
-## ⚠️ Time-sensitive: the provisional patent has hit its 12-month limit
+## ⚠️ Time-sensitive: the provisional patent lapsed on 30 July 2026
 
-The USPTO filing receipt states plainly:
+You confirmed no non-provisional or PCT was filed. **I am not a patent attorney —
+everything below needs confirming with HKUST's Office of Knowledge Transfer (OKT)
+and the named attorney on the receipt (SAM YIP).** Treat it as a checklist for
+that conversation, not as advice.
 
-> "It will not be examined for patentability and **will become abandoned not later
-> than twelve months after its filing date**."
+**Where things stand.** Provisional 63/854,195, filed 30 July 2025, expired of its
+own accord on 30 July 2026. A provisional never becomes a patent — it is a
+12-month placeholder that reserves a priority date. Nothing was abandoned by
+mistake; the placeholder simply ran out.
 
-Filing date **30 July 2025** → the 12-month window closed **30 July 2026**.
-HKUST's own record confirms it: **Maximum Term: 30/7/2026**, Lapse Date blank,
-Status still "Filed", no publication or patent number.
+**What was lost.** The 30 July 2025 priority date. Any future filing gets its own,
+later date.
 
-**Unless a non-provisional (or PCT) application claiming priority was filed on or
-before 30 July 2026, the provisional has now lapsed.** Check with the Office of
-Knowledge Transfer. Their email said the Technology Review Committee would meet
-"around eight months from the filing date" (≈ March 2026) with the filing decision
-made afterwards — so this should have been decided already.
+**What was *not* lost.** Provisionals are never published. This one has no
+publication number and no patent number, so it has not entered the public record
+and does not become prior art against you or anyone else. The invention was not
+disclosed by the filing itself.
 
-This does not change what's on the site (it correctly says "US Provisional Patent
-Application, filed"), but it changes what you'd say in interviews, and whether a
-follow-on filing needs chasing **now**.
+**The real constraint is your own published work,** and that was already true
+before the lapse. DIS 2024 (Jul 2024) and CHI 2025 (Apr 2025) describe the
+scaffolding approach. The US gives a 12-month grace period for an inventor's own
+disclosures, and both of those windows have now closed. Europe and China have
+essentially no grace period, so those jurisdictions were barred from the day each
+paper published. Worth asking OKT to confirm what the papers do and don't cover
+versus the claims that were drafted.
 
-- [ ] Confirm with OKT whether a non-provisional/PCT was filed
-- [ ] If yes, send me the new application number and I'll update the CV entry
+**There may still be a window — ask about this first.** 37 CFR 1.78(b) allows a
+*delayed* benefit claim to a provisional, filed up to **14 months** from the
+provisional's filing date, via petition asserting the delay was unintentional
+plus a fee. Fourteen months from 30 July 2025 is roughly **30 September 2026** —
+about two months out. If HKUST/CUHK still want this, that route needs starting
+now, not in September.
+
+**Most likely explanation:** OKT's Technology Review Committee met around March
+2026 and decided not to pursue. That is a normal outcome and it was the
+universities' call, not yours — the application is co-assigned to HKUST and CUHK.
+Worth confirming so you know which it was.
+
+**Nothing on the site changes.** The CV says "US Provisional Patent Application,
+filed with the USPTO" with the number and date. That is accurate permanently — a
+filed provisional stays a filed provisional. Just don't describe it as pending or
+as likely to issue.
+
+- [ ] Email OKT: was a non-provisional/PCT filed, or was it dropped?
+- [ ] If dropped but still wanted, ask about the 37 CFR 1.78(b) restoration
+      petition before ~30 Sep 2026
+- [ ] If something *was* filed, send me the new application number and I'll
+      update the CV entry
 
 ---
 
@@ -34,19 +61,17 @@ follow-on filing needs chasing **now**.
 
 ### Job-market banner — update it after the defense
 
-The front page opens with:
+Wording is settled. The front page now opens with:
 
 > 🎓 **On the job market.** Defending my Ph.D. thesis in August 2026 and
 > graduating in November 2026. I'm looking for research positions in HCI and
-> human–agent interaction.
+> human–agent interaction, **in academia and industry labs alike**.
 
 Deliberately written in months, not exact dates, so it stays true either side of
 10 August. Two follow-ups:
 
 - [ ] **After 10 Aug 2026** — swap "Defending my Ph.D. thesis in August 2026" for
       "Defended my Ph.D. thesis in August 2026". One line in `_pages/about.md`.
-- [ ] Decide whether to say "research positions" or name industry labs explicitly.
-      Right now it reads as open to both.
 - [ ] Consider a News item for the defense once it's done.
 
 **To remove the banner entirely** (once you've accepted an offer): open
@@ -66,15 +91,19 @@ inclusive — 6 lines, right under the front matter. Nothing else depends on it;
 the `.status-banner` styling stays in `_sass/_base.scss` if you ever want it back
 for another announcement.
 
-### Talks and interns
+### Dean's List / Google Hash Code
 
-- [ ] **Talks** — title, venue, date, invited vs. conference
-- [ ] **Past interns** — names, dates, what they worked on, where they went
+- [ ] Still listed under CV awards. Keep, or drop as too junior now that you have
+      stronger entries?
 
-### Small decisions still open
+      **My suggestion: drop both.** You have a best-paper award at RO-MAN, three
+      years of RedBird, and a full PGS. Undergraduate Dean's List and a 2020
+      programming-contest placing sit oddly beside those on a CV aimed at faculty
+      and industry-research hiring, and the "2018 - 2022" and "2020" rows drag the
+      awards list back six years for no gain. Say the word and I'll remove them —
+      it's the last two entries in the `Honors and Awards` block of `_data/cv.yml`.
+      Keeping them costs nothing either; this is taste, not correctness.
 
-- [ ] **Dean's List / Google Hash Code** — still listed under CV awards. Keep, or drop
-      as too junior now that you have stronger entries?
 - [ ] **UIST wording** — currently "Conditionally accepted" everywhere, since final
       notification is after 8 Aug 2026. Tell me once it's final and I'll change it
       to "Accepted" / "To appear" and add the DOI.
@@ -113,7 +142,7 @@ Two notes for when you add more:
 - Don't hand-resize. Sources are downscaled to 1600px and PNGs quantized to 256
   colors on commit; the site serves 480/800/1400px webp regardless.
 
-### PDFs
+### PDFs (leave it as it is for now)
 
 `assets/pdf/` has DIS24 (+ poster), RO-MAN 24, RO-MAN 25, and the CV.
 Missing PDFs for the CHI and CSCW papers — add them and I'll wire up `pdf = {...}`.
@@ -188,6 +217,20 @@ Venue badges (`abbr`) could drive a second filter row the same way.
 
 ## Done
 
+- **CV page was silently rendering Albert Einstein.** `_config.yml`'s
+  `jekyll_get_json` block loaded the template's demo `assets/json/resume.json`
+  into `site.data.resume`, and `_layouts/cv.liquid` checks that *before* falling
+  back to `_data/cv.yml` — so every edit I made to your CV data was being
+  discarded at build time. Commented out the block (with a note explaining why)
+  and deleted the demo JSON. `/cv/` now renders `_data/cv.yml`.
+- **Talks and Presentations** section added to `_data/cv.yml`, newest first:
+  HKUST CSE summer camp (Jul 2026, invited), 中央美术学院 Beijing (Jun 2026,
+  invited, hosted by Yanjun Lyu), HHME 2025 Dalian (Aug 2025, 交流论文),
+  CHI 2025 Yokohama (Apr 2025), DIS 2024 Copenhagen (Jul 2024, poster).
+- **Interns** — resolved: MSRA and Tsinghua are your own research positions, and
+  both were already in the CV under `Research Experience` with supervisors and
+  project summaries. Nothing to add.
+- Job-market banner wording finalized ("in academia and industry labs alike").
 - Nav and headings capitalized; profile photo swapped; CV PDF download link
 - CV rebuilt from the PDF: internships, funded projects, patent, teaching,
   reviewing, honors

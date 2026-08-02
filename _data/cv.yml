@@ -83,6 +83,31 @@
         - Application No. 63/854,195, filed 30 July 2025. Co-assigned to HKUST and CUHK.
         - Inventors: Helen Mei Ling Meng, Xiaojuan Ma, Jiaxiong Hu, Dingdong Liu, Ka Ho Wong.
 
+- title: Talks and Presentations
+  type: time_table
+  contents:
+    - title: Conversational Agents and Healthcare (invited)
+      institution: CSE Summer Camp for prospective Ph.D. students, HKUST
+      year: Jul 2026
+    - title: Conversational Agents and Human-Agent Interaction (invited)
+      institution: Central Academy of Fine Arts (中央美术学院), Beijing, China
+      year: Jun 2026
+      description:
+        - Hosted by Yanjun Lyu.
+    - title: Exchange paper presentation (交流论文)
+      institution: HHME 2025, Dalian, China
+      year: Aug 2025
+    - title: "Scaffolded Turns and Logical Conversations: Designing Humanized LLM-Powered Conversational Agents for Hospital Admission Interviews"
+      institution: ACM CHI 2025, Yokohama, Japan
+      year: Apr 2025
+      description:
+        - Conference paper presentation.
+    - title: "Exploring Scaffolding Techniques for Agent-Administered Brief Cognitive Screening in Hospital Settings"
+      institution: ACM DIS 2024, Copenhagen, Denmark
+      year: Jul 2024
+      description:
+        - Poster presentation.
+
 - title: Teaching Experience
   type: time_table
   contents:
