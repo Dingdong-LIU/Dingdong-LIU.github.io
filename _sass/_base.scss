@@ -219,11 +219,14 @@ ul.task-list input[type="checkbox"] {
   margin-top: 0.75rem;
 
   .contact-icons {
-    font-size: 2.2rem;
-    line-height: 1.6;
+    // >>> ICON SIZE: change this one value to resize the contact icons. <<<
+    // 1.3rem keeps all five on a single row in the profile column; much above
+    // ~1.6rem and they wrap onto a second line.
+    font-size: 1.3rem;
+    line-height: 1.7;
 
     a {
-      margin-right: 0.55rem;
+      margin-right: 0.5rem;
 
       i::before {
         color: var(--global-text-color);
@@ -236,13 +239,6 @@ ul.task-list input[type="checkbox"] {
         }
       }
     }
-  }
-
-  .contact-email {
-    margin-top: 0.35rem;
-    font-family: monospace;
-    font-size: 0.75rem;
-    word-break: break-all;
   }
 
   .contact-note {
@@ -275,8 +271,11 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Scannable research keywords under the bio.
-.research-tags {
+// Pill/chip list. Not currently used on the about page — the research keywords
+// read better as running text there. Kept because this styling is a good fit
+// for publication filter buttons (see TODO.md); apply with
+// <ul class="tag-pills"><li>…</li></ul>.
+.tag-pills {
   margin: 0.5rem 0 1.5rem;
   padding: 0;
   list-style: none;

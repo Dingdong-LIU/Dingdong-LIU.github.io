@@ -41,17 +41,9 @@ layout: default
         {% if page.social %}
           <div class="profile-social">
             <div class="contact-icons">{% include social.liquid %}</div>
-            <!-- The contact note calls email the best way to reach me, so show
-                 the address rather than hiding it behind an envelope icon.
-                 encode_email percent-encodes for the mailto: href only — it is
-                 not display-safe, so the visible text stays plain. -->
-            {% if site.email %}
-              <div class="contact-email">
-                <a href="mailto:{{ site.email | encode_email }}">
-                  {{- site.email | replace: '@', '(at)' | replace: '.', '(dot)' -}}
-                </a>
-              </div>
-            {% endif %}
+            <!-- The address is listed as plain text in `more_info` above, next
+                 to the location, rather than as a link here. -->
+
             {% if site.contact_note %}
               <div class="contact-note">{{ site.contact_note }}</div>
             {% endif %}

@@ -13,6 +13,7 @@ profile:
   more_info: >
     <p>Dept. of Computer Science and Engineering, HKUST</p>
     <p>Clear Water Bay, Hong Kong</p>
+    <p>dliuak(at)connect(dot)ust(dot)hk</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -30,20 +31,8 @@ My work asks how conversational agents can acquire **communicative competence** 
 - **Coordination** — reading conversational dynamics: when to speak, how to signal and yield the floor, and how to handle interruptions. I study this in embodied spoken dialogue systems and humanoid robots.
 - **Content** — deciding what the conversation should be *about*. I approach this two ways: **empirically**, by learning from and co-designing with domain experts, and by **inference**, using human modeling and graph algorithms to derive the next move.
 
-<!-- Everything above flows in the narrow column beside the profile photo.
-     Clearing here stops a paragraph from starting narrow and then widening
-     mid-way as it passes the bottom of the floated card. -->
-<div class="clear-profile"></div>
-
 I then bring both levels together in a single deployed agent for neurocognitive disorder screening, and use the *gulfs of execution and evaluation* to analyze its interactions with 38 older adults — asking where this competence holds up when the person on the other side is making sense of an unfamiliar and complex system.
 
 Together these ask what an agent must be able to do to genuinely support people — in clinical interviews, cognitive screening, and everyday decision making.
 
-<ul class="research-tags">
-  <li>Human–Agent Interaction</li>
-  <li>Conversational Agents</li>
-  <li>Human–Robot Interaction</li>
-  <li>Turn-Taking &amp; Dialogue Coordination</li>
-  <li>Health &amp; Clinical HCI</li>
-  <li>Large Language Models</li>
-</ul>
+**Research interests:** Human–Agent Interaction · Conversational Agents · Human–Robot Interaction · Turn-Taking &amp; Dialogue Coordination · Health &amp; Clinical HCI · Large Language Models
