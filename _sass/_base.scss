@@ -970,6 +970,26 @@ footer.sticky-bottom {
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
+
+    // Photo revealed alongside the citation when the award button is clicked.
+    // Capped rather than full-width so it reads as a supporting snapshot next to
+    // the text; click it to open the full-resolution version via medium-zoom.
+    img.award-photo {
+      display: block;
+      max-width: min(420px, 100%);
+      height: auto;
+      margin-top: 0.6rem;
+      cursor: zoom-in;
+    }
+
+    // Trophy in front of an award-winning paper's title. Slightly smaller than the
+    // title text and non-bold, so it marks the entry without competing with it.
+    .title .award-emoji {
+      font-size: 0.9em;
+      font-weight: normal;
+      margin-right: 0.15em;
+      cursor: help; // the title attribute names the specific award on hover
+    }
   }
 }
 

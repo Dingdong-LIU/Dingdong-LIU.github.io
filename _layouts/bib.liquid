@@ -47,7 +47,18 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="title">
+      {%- comment -%}
+        Local addition: a trophy in front of the title of any entry carrying an
+        `award` field, so award-winning papers stand out while scanning the list.
+        An emoji rather than a Font Awesome icon on purpose — it stays colored
+        instead of inheriting the title's text color, which is the whole point.
+      {%- endcomment -%}
+      {%- if entry.award -%}
+        <span class="award-emoji" title="{{ entry.award_name | default: 'Award' }}" role="img" aria-label="Award-winning paper">🏆</span>
+      {% endif -%}
+      {{ entry.title }}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -339,7 +350,31 @@
     {% if entry.award %}
       <!-- Hidden Award block -->
       <div class="award hidden d-print-inline">
-        <p>{{ entry.award | markdownify }}</p>
+        {%- comment -%}
+          `markdownify` already emits a <p>, so upstream's surrounding <p> produced
+          invalid nested paragraphs — browsers split them, leaving an empty <p> and
+          a blank gap above the text. Emit the markdownified value directly.
+        {%- endcomment -%}
+        {{ entry.award | markdownify }}
+        {%- comment -%}
+          Local addition: an optional `award_photo` field on a bib entry renders a
+          photo of the award inside this block, so it appears when the award button
+          is clicked. Filenames are relative to assets/img/awards/. Goes through
+          figure.liquid for the same webp/srcset and click-to-zoom treatment the
+          publication thumbnails get.
+        {%- endcomment -%}
+        {% if entry.award_photo %}
+          {% assign award_photo_path = entry.award_photo | prepend: '/assets/img/awards/' %}
+          {%
+            include figure.liquid
+            loading="lazy"
+            path=award_photo_path
+            sizes="(max-width: 576px) 90vw, 420px"
+            class="award-photo z-depth-1 rounded"
+            zoomable=true
+            alt=entry.award_name
+          %}
+        {% endif %}
       </div>
     {% endif %}
 

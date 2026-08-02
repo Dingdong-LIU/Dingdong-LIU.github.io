@@ -142,6 +142,26 @@ Two notes for when you add more:
 - Don't hand-resize. Sources are downscaled to 1600px and PNGs quantized to 256
   colors on commit; the site serves 480/800/1400px webp regardless.
 
+### Awards on a publication (how it works now)
+
+Three bib fields drive this, all optional:
+
+```bibtex
+award       = {UBTECH Best Industry Application Award (Bronze), IEEE RO-MAN 2024.},
+award_name  = {Best Industry Application},
+award_photo = {roman2024-award-photo.jpg},
+```
+
+- `award` present → a 🏆 appears in front of the title in every listing, and an
+  award button joins the Abs/DOI/BIB row.
+- `award_name` → the button's label. Defaults to "Awarded".
+- `award_photo` → filename inside `assets/img/awards/`. Shown when the award
+  button is clicked, with webp variants and click-to-zoom, same as publication
+  thumbnails. Drop full-resolution files in and let the build scale them.
+
+`award_photo` is a local addition to `_layouts/bib.liquid`, not upstream al-folio
+— worth knowing if you ever pull template updates.
+
 ### PDFs (leave it as it is for now)
 
 `assets/pdf/` has DIS24 (+ poster), RO-MAN 24, RO-MAN 25, and the CV.
