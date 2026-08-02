@@ -42,8 +42,13 @@ module Jekyll
       CacheDigester.new(file_name: file_name, directory: nil).digest!
     end
 
+    # The Sass sources live in _sass/ at the repository root, not assets/_sass/.
+    # With the wrong path the glob matched nothing, so every build hashed an
+    # empty string to d41d8cd98f00b204e9800998ecf8427e -- a constant. The URL
+    # never changed, so browsers served a stale stylesheet indefinitely and CSS
+    # edits appeared to have no effect.
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      CacheDigester.new(file_name: file_name, directory: '_sass').digest!
     end
   end
 end

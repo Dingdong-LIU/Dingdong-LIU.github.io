@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. Candidate, <a href='https://hci.cse.ust.hk/'>HCI Initiative</a>, <a href='https://hkust.edu.hk/'>HKUST</a>
+subtitle: Ph.D. Candidate, <a href='https://hci.cse.ust.hk/'>HCI Initiative</a>, <a href='https://hkust.edu.hk/'>Hong Kong University of Science and Technology (HKUST)</a>
 
 profile:
   align: right
@@ -11,7 +11,7 @@ profile:
   # Position and university are already in the subtitle above, so this adds only
   # what is not stated there: the department and where I actually am.
   more_info: >
-    <p>Dept. of Computer Science and Engineering</p>
+    <p>Dept. of Computer Science and Engineering, HKUST</p>
     <p>Clear Water Bay, Hong Kong</p>
 
 news: true # includes a list of news items
@@ -29,6 +29,11 @@ My work asks how conversational agents can acquire **communicative competence** 
 
 - **Coordination** — reading conversational dynamics: when to speak, how to signal and yield the floor, and how to handle interruptions. I study this in embodied spoken dialogue systems and humanoid robots.
 - **Content** — deciding what the conversation should be *about*. I approach this two ways: **empirically**, by learning from and co-designing with domain experts, and by **inference**, using human modeling and graph algorithms to derive the next move.
+
+<!-- Everything above flows in the narrow column beside the profile photo.
+     Clearing here stops a paragraph from starting narrow and then widening
+     mid-way as it passes the bottom of the floated card. -->
+<div class="clear-profile"></div>
 
 I then bring both levels together in a single deployed agent for neurocognitive disorder screening, and use the *gulfs of execution and evaluation* to analyze its interactions with 38 older adults — asking where this competence holds up when the person on the other side is making sense of an unfamiliar and complex system.
 

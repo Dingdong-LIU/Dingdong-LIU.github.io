@@ -47,7 +47,9 @@ layout: default
                  not display-safe, so the visible text stays plain. -->
             {% if site.email %}
               <div class="contact-email">
-                <a href="mailto:{{ site.email | encode_email }}">{{ site.email }}</a>
+                <a href="mailto:{{ site.email | encode_email }}">
+                  {{- site.email | replace: '@', '(at)' | replace: '.', '(dot)' -}}
+                </a>
               </div>
             {% endif %}
             {% if site.contact_note %}
