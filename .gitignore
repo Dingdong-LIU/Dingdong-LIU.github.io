@@ -16,3 +16,6 @@ vendor
 # stay on disk only. Delete these lines if you decide they should be published.
 P3683US00*.pdf
 Patent_*.pdf
+
+# Claude Code local settings — machine-specific, not part of the site.
+.claude/

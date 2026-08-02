@@ -49,12 +49,6 @@
         - Led an independent project to improve telehealth communication; analyzed 5,000+ encounters.
         - Developed a taxonomy of information-delivery failures and built an algorithm that significantly accelerated communication (statistically validated).
         - Supervised by Yun Wang.
-    - title: Student Research Assistant
-      institution: Roger King Center for Asian Family Business and Family Office, HKUST
-      year: Jan 2022 - Mar 2022
-      description:
-        - Collected and cleaned financial reports, share ownership, and stock data of Hong Kong listed companies to identify family businesses.
-        - Supervised by Prof. Winnie Peng.
 
 - title: Funded Research Projects
   type: time_table
@@ -168,20 +162,23 @@
     - year: 2022 - 2026
       items:
         - University Scholarship - Postgraduate Studentship (PGS), HKUST
-    - year: 2021
-      items:
-        - Second Place, Best Strategy - Joint-University Algo Trading Challenge, Hong Kong
-    - year: 2020
-      items:
-        - Top 5%, Google Hash Code 2020
+    # Undergraduate-era awards, folded into one row so they read as early-career
+    # context rather than competing with the Ph.D. entries above.
     - year: 2018 - 2022
       items:
-        - University Scholarship - Kerry Holdings Limited Scholarship, HKUST
-        - Dean's List, HKUST (five times)
+        - "<i>Undergraduate:</i> University Scholarship - Kerry Holdings Limited Scholarship, HKUST; Dean's List (five times); Second Place, Best Strategy - Joint-University Algo Trading Challenge (2021); Top 5%, Google Hash Code (2020)."
 
-- title: Other Experience
+# Everything below predates the Ph.D. Grouped under one undergraduate heading so
+# the Research Experience section stays focused on HCI research.
+- title: Undergraduate Experience
   type: time_table
   contents:
+    - title: Student Research Assistant
+      institution: Roger King Center for Asian Family Business and Family Office, HKUST
+      year: Jan 2022 - Mar 2022
+      description:
+        - Collected and cleaned financial reports, share ownership, and stock data of Hong Kong listed companies to identify family businesses.
+        - Supervised by Prof. Winnie Peng.
     - title: Team Leader
       institution: Joint-University Algo Trading Challenge 2021, Hong Kong
       year: Nov 2020 - Feb 2021

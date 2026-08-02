@@ -37,6 +37,20 @@ a.btncv:hover {
  * CV TIME_TABLE styles
  *****************************/
 
+// Date column of a time_table entry. Bootstrap badges are `white-space: nowrap`,
+// which made long date values overflow and collide with the entry title. Let them
+// wrap onto a second line and keep them snug against the title column on desktop.
+.cv-date {
+  .badge {
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 0;
+  }
+}
+
 p.location {
   font-size: 0.7rem;
   white-space: nowrap;

@@ -24,36 +24,49 @@ publication number and no patent number, so it has not entered the public record
 and does not become prior art against you or anyone else. The invention was not
 disclosed by the filing itself.
 
-**The real constraint is your own published work,** and that was already true
-before the lapse. DIS 2024 (Jul 2024) and CHI 2025 (Apr 2025) describe the
-scaffolding approach. The US gives a 12-month grace period for an inventor's own
-disclosures, and both of those windows have now closed. Europe and China have
-essentially no grace period, so those jurisdictions were barred from the day each
-paper published. Worth asking OKT to confirm what the papers do and don't cover
-versus the claims that were drafted.
+**Novelty is intact — this is the important part.** The paper describing the
+patented content is the TOCHI manuscript, which is still under review with no
+associate editor assigned, so it is unpublished. Nothing in the public record
+discloses the invention. That means a fresh filing is still possible; it would
+simply carry a 2026 priority date instead of 30 July 2025.
 
-**There may still be a window — ask about this first.** 37 CFR 1.78(b) allows a
-*delayed* benefit claim to a provisional, filed up to **14 months** from the
-provisional's filing date, via petition asserting the delay was unintentional
-plus a fee. Fourteen months from 30 July 2025 is roughly **30 September 2026** —
-about two months out. If HKUST/CUHK still want this, that route needs starting
-now, not in September.
+**The TOCHI publication date is now the real deadline.** The moment that paper
+publishes, Europe and China are barred outright (no grace period), and the US
+grace clock starts running. Review is slow and acceptance is months away, so
+there is runway — but the timing is not yours to control, and an accepted paper
+can move to production faster than expected.
 
-**Most likely explanation:** OKT's Technology Review Committee met around March
-2026 and decided not to pursue. That is a normal outcome and it was the
-universities' call, not yours — the application is co-assigned to HKUST and CUHK.
-Worth confirming so you know which it was.
+**Do not post a preprint** — arXiv, ResearchGate, a lab page, the thesis if it
+goes into a public repository — until this is settled. Any of those counts as a
+publication and closes the same doors.
+
+**There may be a better option than a fresh filing — ask about this first.**
+37 CFR 1.78(b) allows a *delayed* benefit claim to a provisional, filed up to
+**14 months** from the provisional's filing date, via petition asserting the
+delay was unintentional plus a fee. Fourteen months from 30 July 2025 is roughly
+**30 September 2026** — about two months out. That route recovers the original
+July 2025 priority date, which a fresh filing cannot. If HKUST and CUHK still
+want this, it needs starting now.
+
+**Most likely explanation for the lapse:** OKT's Technology Review Committee met
+around March 2026 and decided not to pursue. That is a normal outcome and it was
+the universities' call, not yours — the application is co-assigned to HKUST and
+CUHK. Worth confirming so you know which it was.
 
 **Nothing on the site changes.** The CV says "US Provisional Patent Application,
 filed with the USPTO" with the number and date. That is accurate permanently — a
 filed provisional stays a filed provisional. Just don't describe it as pending or
 as likely to issue.
 
-- [ ] Email OKT: was a non-provisional/PCT filed, or was it dropped?
-- [ ] If dropped but still wanted, ask about the 37 CFR 1.78(b) restoration
-      petition before ~30 Sep 2026
-- [ ] If something *was* filed, send me the new application number and I'll
-      update the CV entry
+- [ ] Email OKT this week. Tell them (a) the provisional lapsed 30 Jul 2026,
+      (b) the TOCHI manuscript is still unpublished so novelty is intact, and
+      (c) ask whether the drop was deliberate or an oversight.
+- [ ] If it is still wanted, ask specifically about the 37 CFR 1.78(b)
+      restoration petition before ~30 Sep 2026, versus filing fresh before TOCHI
+      publishes.
+- [ ] Hold off on any public preprint of the TOCHI paper until OKT answers.
+- [ ] If something does get filed, send me the application number and I'll update
+      the CV entry.
 
 ---
 
@@ -90,19 +103,6 @@ and
 inclusive — 6 lines, right under the front matter. Nothing else depends on it;
 the `.status-banner` styling stays in `_sass/_base.scss` if you ever want it back
 for another announcement.
-
-### Dean's List / Google Hash Code
-
-- [ ] Still listed under CV awards. Keep, or drop as too junior now that you have
-      stronger entries?
-
-      **My suggestion: drop both.** You have a best-paper award at RO-MAN, three
-      years of RedBird, and a full PGS. Undergraduate Dean's List and a 2020
-      programming-contest placing sit oddly beside those on a CV aimed at faculty
-      and industry-research hiring, and the "2018 - 2022" and "2020" rows drag the
-      awards list back six years for no gain. Say the word and I'll remove them —
-      it's the last two entries in the `Honors and Awards` block of `_data/cv.yml`.
-      Keeping them costs nothing either; this is taste, not correctness.
 
 - [ ] **UIST wording** — currently "Conditionally accepted" everywhere, since final
       notification is after 8 Aug 2026. Tell me once it's final and I'll change it
@@ -217,6 +217,20 @@ Venue badges (`abbr`) could drive a second filter row the same way.
 
 ## Done
 
+- **CV date badges collided with entry titles.** Upstream pinned the date column
+  to an inline `width: 75px` while the badge is `white-space: nowrap`, so any
+  value longer than a bare year ("Jan 2026 - Apr 2026") overflowed into the title.
+  Gave the column a real grid share (`col-12 col-md-3`) in
+  `_includes/cv/time_table.liquid` and added `.cv-date` to `_sass/_cv.scss` so
+  long values wrap instead. Also fixed upstream's `cl-sm-2` / `cl-sm-10` typos.
+- **Undergraduate-era material folded down.** Dean's List, Google Hash Code, the
+  Kerry Holdings scholarship, and the Algo Trading placing are now one
+  "2018 - 2022 — *Undergraduate:* …" row under Honors and Awards instead of four
+  separate rows. The Roger King Center RA moved out of Research Experience into a
+  renamed **Undergraduate Experience** section (was "Other Experience"), alongside
+  the Algo Trading team lead and the Wuhan YCIG internship. Research Experience is
+  now just Tsinghua and MSRA. Leadership was left as its own section — say the
+  word if you want it folded in too, it is the same era.
 - **CV page was silently rendering Albert Einstein.** `_config.yml`'s
   `jekyll_get_json` block loaded the template's demo `assets/json/resume.json`
   into `site.data.resume`, and `_layouts/cv.liquid` checks that *before* falling
