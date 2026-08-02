@@ -32,20 +32,22 @@ follow-on filing needs chasing **now**.
 
 ## Needs your input
 
-### ⚠️ Confirm the job-market banner
+### Job-market banner — update it after the defense
 
-The front page now opens with:
+The front page opens with:
 
-> 🎓 **On the job market.** I expect to complete my Ph.D. in 2026 and am looking
-> for research positions in HCI and human–agent interaction.
+> 🎓 **On the job market.** Defending my Ph.D. thesis in August 2026 and
+> graduating in November 2026. I'm looking for research positions in HCI and
+> human–agent interaction.
 
-**I wrote this from your CV's "2026 (expected)" — you have not confirmed it.**
-It is the first thing a visitor reads, so check the wording. Edit it in
-`_pages/about.md`, or tell me to change or remove it. Things to decide:
+Deliberately written in months, not exact dates, so it stays true either side of
+10 August. Two follow-ups:
 
-- Is "2026" still right, or do you have a defense date?
-- Industry as well as academic positions, or academic only?
-- Do you want this visible at all right now?
+- [ ] **After 10 Aug 2026** — swap "Defending my Ph.D. thesis in August 2026" for
+      "Defended my Ph.D. thesis in August 2026". One line in `_pages/about.md`.
+- [ ] Decide whether to say "research positions" or name industry labs explicitly.
+      Right now it reads as open to both.
+- [ ] Consider a News item for the defense once it's done.
 
 ### Talks and interns
 
