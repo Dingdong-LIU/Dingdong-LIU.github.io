@@ -104,9 +104,12 @@ inclusive — 6 lines, right under the front matter. Nothing else depends on it;
 the `.status-banner` styling stays in `_sass/_base.scss` if you ever want it back
 for another announcement.
 
-- [ ] **UIST wording** — currently "Conditionally accepted" everywhere, since final
-      notification is after 8 Aug 2026. Tell me once it's final and I'll change it
-      to "Accepted" / "To appear" and add the DOI.
+- [ ] **UIST DOI** — formally accepted 9 Aug 2026; wording changed from
+      "Conditionally accepted" to "To appear" in the bib and news item. The DOI
+      is assigned — <https://doi.org/10.1145/3830398.3830658> — but not yet
+      registered (doi.org 404 as of 10 Aug 2026). Ready-to-paste `doi`/`html`
+      lines sit in a comment above the CoNarrate entry in
+      `_bibliography/papers.bib`; uncomment them once the link resolves.
 - [ ] **TOCHI anonymization** — I removed the venue name and the `abbr` badge; title
       and full author list are still shown. If you want stronger anonymization
       (hiding the title too, or dropping the entry until acceptance), say so.
