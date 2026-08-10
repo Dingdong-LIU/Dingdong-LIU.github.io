@@ -112,6 +112,17 @@ div.container-links {
   margin-bottom: 0.5rem;
 }
 
+// Poster thumbnail under a time_table entry (`poster` field in _data/cv.yml).
+// Capped small so it reads as a supporting flyer next to the text; click it to
+// open the full version via medium-zoom.
+img.cv-poster {
+  display: block;
+  max-width: min(200px, 100%);
+  height: auto;
+  margin-top: 0.6rem;
+  cursor: zoom-in;
+}
+
 /*****************************
  * CV MAP styles
  *****************************/

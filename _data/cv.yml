@@ -81,13 +81,16 @@
   type: time_table
   contents:
     - title: Conversational Agents and Healthcare (invited)
-      institution: CSE Summer Camp for prospective Ph.D. students, HKUST
+      institution: HKUST Engineering Summer Camp for Elite Students (科大工學院精英學生夏令營)
       year: Jul 2026
+      description:
+        - Represented the Department of Computer Science and Engineering.
     - title: Conversational Agents and Human-Agent Interaction (invited)
       institution: Central Academy of Fine Arts (中央美术学院), Beijing, China
       year: Jun 2026
       description:
-        - Hosted by Yanjun Lyu.
+        - Hosted by Yanjun Lyu and Wenchao Zhang.
+      poster: cafa2026-hri-lecture-poster.jpg
     - title: Exchange paper presentation (交流论文)
       institution: HHME 2025, Dalian, China
       year: Aug 2025

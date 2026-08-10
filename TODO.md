@@ -165,6 +165,26 @@ award_photo = {roman2024-award-photo.jpg},
 `award_photo` is a local addition to `_layouts/bib.liquid`, not upstream al-folio
 — worth knowing if you ever pull template updates.
 
+### Poster on a CV entry (how it works now)
+
+Any `time_table` entry in `_data/cv.yml` can carry an optional `poster` field:
+
+```yaml
+- title: Conversational Agents and Human-Agent Interaction (invited)
+  institution: Central Academy of Fine Arts (中央美术学院), Beijing, China
+  poster: cafa2026-hri-lecture-poster.jpg
+```
+
+- `poster` → filename inside `assets/img/talks/`. Renders a ~200px-wide
+  thumbnail under the entry text, with webp variants and click-to-zoom, same
+  machinery as publication thumbnails and award photos.
+- First use: the CAFA guest-lecture poster (d.School CAFA made it for the
+  Jun 2026 invited talk). The 8534×12800 WeChat PNG export (8.7 MB) was
+  converted to a 1600px-wide JPG (~650 KB) per the no-oversized-sources rule.
+
+Like `award_photo`, this is a local addition (to `_includes/cv/time_table.liquid`
+and `_sass/_cv.scss`), not upstream al-folio.
+
 ### PDFs (leave it as it is for now)
 
 `assets/pdf/` has DIS24 (+ poster), RO-MAN 24, RO-MAN 25, and the CV.

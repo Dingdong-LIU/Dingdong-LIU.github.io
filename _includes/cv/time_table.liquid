@@ -127,6 +127,27 @@
               {% endfor %}
             </div>
           {% endif %}
+          {%- comment -%}
+            Local addition, not upstream al-folio (mirrors `award_photo` in
+            _layouts/bib.liquid): an optional `poster` field on a time_table entry
+            renders a poster/flyer thumbnail under the entry text. Filenames are
+            relative to assets/img/talks/. Goes through figure.liquid for the same
+            webp/srcset and click-to-zoom treatment as publication thumbnails.
+          {%- endcomment -%}
+          {% if content.poster %}
+            {% assign poster_path = content.poster | prepend: '/assets/img/talks/' %}
+            <div class="ml-1 ml-md-4">
+              {%
+                include figure.liquid
+                loading="lazy"
+                path=poster_path
+                sizes="(max-width: 576px) 45vw, 200px"
+                class="cv-poster z-depth-1 rounded"
+                zoomable=true
+                alt=content.title
+              %}
+            </div>
+          {% endif %}
         </div>
       </div>
     </li>
