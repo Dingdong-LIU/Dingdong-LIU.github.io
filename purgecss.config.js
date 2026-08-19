@@ -10,5 +10,9 @@ module.exports = {
   // itself, so our overrides in _base.scss were being stripped in production
   // only — the zoomed image reverted to the thumbnail's 3:2 box on the live
   // site while looking correct locally. Keep the whole family.
-  safelist: [/^medium-zoom/],
+  // Same failure mode as medium-zoom for the CV poster toggle: the `[open]`
+  // attribute on details.cv-poster-details only exists after a user click, so
+  // the chevron-flip rule looks unused in the built HTML and would be stripped
+  // in production only.
+  safelist: [/^medium-zoom/, /^cv-poster/],
 };

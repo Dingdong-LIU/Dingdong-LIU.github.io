@@ -175,9 +175,13 @@ Any `time_table` entry in `_data/cv.yml` can carry an optional `poster` field:
   poster: cafa2026-hri-lecture-poster.jpg
 ```
 
-- `poster` → filename inside `assets/img/talks/`. Renders a ~200px-wide
-  thumbnail under the entry text, with webp variants and click-to-zoom, same
-  machinery as publication thumbnails and award photos.
+- `poster` → filename inside `assets/img/talks/`. Renders a "Poster ▸" toggle
+  under the entry text (native `<details>`, no JS), collapsed by default;
+  expanding shows a ~200px-wide thumbnail with webp variants and click-to-zoom,
+  same machinery as publication thumbnails and award photos. Lazy-loaded, so
+  the image isn't fetched until first expanded. `/^cv-poster/` is safelisted in
+  `purgecss.config.js` — the `[open]` chevron-flip rule only matches after a
+  user click, the same production-only purge trap medium-zoom hit.
 - First use: the CAFA guest-lecture poster (d.School CAFA made it for the
   Jun 2026 invited talk). The 8534×12800 WeChat PNG export (8.7 MB) was
   converted to a 1600px-wide JPG (~650 KB) per the no-oversized-sources rule.
