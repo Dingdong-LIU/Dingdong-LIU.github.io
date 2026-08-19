@@ -19,3 +19,7 @@ Patent_*.pdf
 
 # Claude Code local settings — machine-specific, not part of the site.
 .claude/
+
+# CV working files: the editable .docx masters and intermediate drafts live on
+# disk only. The published CV PDF lives in assets/pdf/ instead.
+assets/doc/*.docx
