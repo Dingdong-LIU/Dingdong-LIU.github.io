@@ -20,12 +20,15 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons, rendered inside the profile card
 ---
 
-<!-- ===== JOB-MARKET BANNER — delete this whole block once you've accepted an
-     offer. Nothing else depends on it; the page reads fine without it. ===== -->
+{% comment %}
+  ===== JOB-MARKET BANNER — hidden for now, not deleted (no offer accepted yet).
+  To show it again, delete the Liquid comment tags wrapping this block.
+  Delete the whole block once you've accepted an offer; nothing else depends on
+  it, and the .status-banner styling stays in _sass/_base.scss. =====
 <div class="status-banner" markdown="1">
 🎓 &nbsp;**On the job market.** Defending my Ph.D. thesis in August 2026 and graduating in November 2026. I'm looking for research positions in HCI and human–agent interaction, in academia and industry labs alike.
 </div>
-<!-- ===== END JOB-MARKET BANNER ===== -->
+{% endcomment %}
 
 My name is Dingdong LIU. I'm currently a Ph.D. candidate in the Department of Computer Science and Engineering (CSE) at the [HCI Initiative](https://hci.cse.ust.hk/) of [HKUST](https://hkust.edu.hk/), supervised by Prof. [Xiaojuan MA](https://seng.hkust.edu.hk/about/people/faculty/xiaojuan-ma) and Prof. [Fugee TSUNG](https://seng.hkust.edu.hk/about/people/faculty/fugee-tsung) since 2022. I also do research on humanoid robots with Prof. [Bertram Emil SHI](https://seng.hkust.edu.hk/about/people/faculty/bertram-emil-shi) at the [Center for Aging Science](https://aging.hkust.edu.hk/). Prior to that, I earned my Bachelor's degree in Computer Science and Data Science at HKUST.
 
